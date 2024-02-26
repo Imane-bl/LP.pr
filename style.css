@@ -1,0 +1,136 @@
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
+
+}
+
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+header{
+    position: relative;
+    width:100%;
+    height:auto;
+
+  
+  
+}
+header .logo{
+    color:var(--main-color);
+    
+    text-transform: capitalize;
+    font-size:30px;
+    font-weight: 900;
+    padding:20px;
+    margin-bottom: 10px;
+   
+ box-shadow: 0 0px 20px -10px black;
+}
+.logo span{
+
+    background: linear-gradient(to right,#00ccff,#f11734,rgb(235, 61, 142),#e47ac4 ,#00ccff);
+     -webkit-background-clip: text;
+color: transparent;
+}
+header ul {
+
+    display:flex;
+    list-style:none ;
+  justify-content:right;
+
+ 
+  margin-top: -65px;
+  margin-bottom: 100px;
+   
+
+}
+header ul >li{
+    padding:6px;
+    overflow-y: hidden;
+   
+  
+}
+
+header ul >li:hover{
+     background-color: #eee;
+     height:55px;
+     padding:8px; 
+   
+    cursor: pointer;
+    border-top: 3px solid var(--main-color-alt);
+    transition: margin-lft 2s, color 1s;
+}
+
+header ul >li a{
+margin-right:10px;
+
+     color:black;
+     opacity:0.7;
+    text-decoration: none;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:5px;
+    /*margin-bottom:-20px;*/
+    
+  
+}
+
+header ul li a:hover{
+    color:var(--main-color-alt);
+ 
+}
+
+/*start page 1 */
+.back{
+   background-color: var(--section-background);  
+/* border-bottom-right-radius: 150%;*/
+border-radius: 0% 60% 9% 110% / 30% 100% 30% 160%;
+
+ position:absolute ;
+ top:78px;
+ height:100vh;
+
+}
+.first-page{
+    display:flex;
+margin:90px 5%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.first-page .left-side{
+    font-size:20px;
+   
+}
+.first-page .left-side p{
+    opacity: 0.6;
+    margin-top:10px;
+}
+.first-page img{
+    width: 490px;
+    animation: move 5s linear infinite;
+
+}
+
+
+@keyframes move {
+    
+    0%,100%{
+        transform: translateY(-5%);
+    }50% {
+            transform: translateY(5%);
+    }
+}
+    
+
+
+
