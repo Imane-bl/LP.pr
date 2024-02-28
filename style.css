@@ -13,6 +13,10 @@ padding:0;
     --main-padding-bottom: 100px;
     --section-background: #ececec;
   }
+  .contenaire{
+    height:auto;
+    width:100vh;
+  }
   body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -20,84 +24,81 @@ header{
     position: relative;
     width:100%;
     height:auto;
-
   
+ 
+
+   box-shadow: 10px 0px 20px 0px black;
   
 }
 header .logo{
     color:var(--main-color);
-    
+    position: absolute;
     text-transform: capitalize;
     font-size:30px;
     font-weight: 900;
-    padding:20px;
-    margin-bottom: 10px;
+left:60px;
+top:20px;
+    
    
- box-shadow: 0 0px 20px -10px black;
+
 }
 .logo span{
 
     background: linear-gradient(to right,#00ccff,#f11734,rgb(235, 61, 142),#e47ac4 ,#00ccff);
      -webkit-background-clip: text;
 color: transparent;
+background-color: #f11734;
+font-weight: bolder;
+font-size: 30px;
 }
-header ul {
+header nav {
+position: absolute;
+right:20px;
 
-    display:flex;
-    list-style:none ;
-  justify-content:right;
 
- 
-  margin-top: -65px;
-  margin-bottom: 100px;
-   
+display:flex;
+top:20px;
+  justify-content: space-around;
+  margin:auto;
 
 }
-header ul >li{
-    padding:6px;
-    overflow-y: hidden;
-   
+header nav a {
+position: relative;
+text-decoration: none;
+color:rgb(19, 18, 18);
+padding:0 10px;
+margin-top:10px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+opacity:0.7;
+
+}
+
+header nav a::after{
+content:"";
+position: absolute;
+background-color: #f11734;
+height: 3px;
+width:0;
+left:0;
+bottom:-10px;
+transition: 0.3s;
   
 }
-
-header ul >li:hover{
-     background-color: #eee;
-     height:55px;
-     padding:8px; 
-   
-    cursor: pointer;
-    border-top: 3px solid var(--main-color-alt);
-    transition: margin-lft 2s, color 1s;
-}
-
-header ul >li a{
-margin-right:10px;
-
-     color:black;
-     opacity:0.7;
-    text-decoration: none;
-    font-weight: 600;
-    font-family:Arial, Helvetica, sans-serif;
-    padding:5px;
-    /*margin-bottom:-20px;*/
-    
-  
-}
-
-header ul li a:hover{
-    color:var(--main-color-alt);
- 
+header nav a:hover:after{
+  width:100%;
+  background:linear-gradient( rgb(78, 45, 197),rgb(61, 125, 168),rgb(118, 179, 230))
 }
 
 /*start page 1 */
 .back{
-   background-color: var(--section-background);  
+   /*background-color: var(--section-background);  */
 /* border-bottom-right-radius: 150%;*/
-border-radius: 0% 60% 9% 110% / 30% 100% 30% 160%;
-
+/*border-radius: 0% 60% 9% 110% / 30% 100% 30% 160%;*/
  position:absolute ;
  top:78px;
  height:100vh;
+
+     /*  background-color: #eee;*/
 
 }
 .first-page{
@@ -105,11 +106,42 @@ border-radius: 0% 60% 9% 110% / 30% 100% 30% 160%;
 margin:90px 5%;
     justify-content: center;
     align-items: center;
+
    
 }
 .first-page .left-side{
     font-size:20px;
+    position: relative;
+
+
+    
    
+}
+.first-page h1{
+  position: absolute;
+  transform: translate(0%,-80%);
+  color:#fff;
+
+}
+.first-page h1:nth-child(1){
+  color:transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.first-page h1:nth-child(2){
+  color: #03a9f4;
+  animation:animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+  0%,100%{
+    clip-path: polygon(2% 45%, 15% 44%, 32% 50%,
+     54% 60%, 70% 61%, 84% 59%, 99% 52%, 99% 100%, 0% 100%);
+  }
+  50%{
+    clip-path: polygon(0 60%, 16% 65%, 34% 66%,
+    54% 51%, 62% 67%, 84% 45%, 99% 46%, 99% 100%, 0% 100%);
+  }
 }
 .first-page .left-side p{
     opacity: 0.6;
@@ -130,7 +162,58 @@ margin:90px 5%;
             transform: translateY(5%);
     }
 }
+.mega-menu{
+  width:150vh;
+  background-color: #eee;
+  height:50vh;
+  margin-top:10px;
+  display:flex;
+  border-bottom:4px solid var(--main-color-alt) ;
+   border-radius:10px;
+}
+.image img{
+  width:300px;
+  padding:20px;
+}  
+.mega-menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 3px 30px  ;
+ /* line-height: 2.6rem; */
+ 
+}
+.mega-menu ul li a{
+
+  border-bottom: 1px solid rgba(75, 71, 71, 0.486);
+margin:30px 0;
+   line-height: 2.6rem;
+ 
+}
+.mega-menu ul li a{
+
+  color:var(--main-color);
+
+}
+
+
     
+/*media for header*/
+/*
+@media screen and (max-width:678px){
+  .container{
+    max-width:300px;
+
+}
+.first-page img{
+  background-image: none;
+}
+.header ul{
+  margin-top:30px;
+}
+
+}*/
+  
+
 
 
 
